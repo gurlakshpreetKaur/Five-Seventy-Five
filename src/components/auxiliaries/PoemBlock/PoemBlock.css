@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+.poem-block {
+    background: var(--chai);
+    border-radius: 4px;
+    padding: 33px;
+    transition: background 0.6s, border-radius 1s;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.poem-block:hover {
+    background: var(--chai-light);
+    border-radius: 12px;
+
+}
+
+.poem-block .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+    /* background-color: blue; */
+}
+
+.poem-block .credits {
+    /* background-color: black; */
+    text-align: right;
+}
+
+.poem-block .credits p {
+    font-family: var(--serif);
+    margin: 0;
+    text-align: right;
+    font-size: 0.5rem;
+}
+
+.poem-block .credits p:nth-of-type(1) {
+    font-size: 0.75rem;
+}
+
+.poem-block .support {
+    position: relative;
+}
+
+.poem-block .support span {
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.sup-icon {
+    display: inline-block;
+}
+
+.sup-icon * {
+    transition: 0.25s color;
+}
+
+.sup-icon p {
+    /* background-color: blue; */
+    font-size: 0.75rem;
+    padding-left: 20px;
+    position: absolute;
+    top: -12px;
+}
+
+.poem-block .sup-icon.heart *:not(p) {
+    color: var(--yellow);
+}
+
+.poem-block .sup-icon.heart p,
+.poem-block .sup-icon.bookmark,
+.poem-block .sup-icon.share {
+    color: var(--mid-green);
+}
+
+.poem-block .sup-icon.bookmark:hover,
+.poem-block .sup-icon.share:hover,
+.bookmark-done,
+.share-done {
+    color: var(--dark-green);
+}
+
+.poem-block .sup-icon.heart:hover *,
+.heart-done * {
+    color: var(--wine);
+}
+
+.poem-block .content-editable,
+.poem-block .content-editable:focus {
+    display: inline-block;
+    width: 100%;
+    outline: 1px var(--dark-green) dashed;
+    border-radius: 4px;
+}
+
+.poem-block select {
+    display: inline-block;
+    padding: 0px 4px;
+    width: max-content;
+    background-color: transparent;
+    outline: 1px var(--dark-green) dashed;
+    border: 0;
+    border-radius: 2px;
+    font-family: var(--serif);
+    font-size: 0.5rem;
+    text-align: right;
+    width: 6rem;
+}
+
+.poem-block.preview .content-editable,
+select {
+    outline-color: transparent;
+}
+
+.poem-block .delete-btn {
+    background-color: transparent;
+    color: grey;
+    position: absolute;
+    top: 21px;
+    left: 17px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s, 0.5s color;
+}
+
+.view-user-profile .poem-block .delete-btn:hover {
+    color: var(--wine);
+}
+
+.view-user-profile .poem-block:hover .delete-btn {
+    opacity: 1;
+}
+
+.confirm-delete-text {
+    font-size: 0.8rem;
+    color: white;
+}
+
+.confirm-delete-text + button.wine-btn {
+    transition: 0.4s color;
+}
+
+.poem-block .editable-textarea-lines,
+.poem-block .editable-textarea-title {
+    background: transparent;
+    resize: none;
+    width: 100%;
+    padding: 0px;
+    outline: 1px var(--dark-green) dashed;
+    display: inline-block;
+    border-radius: 4px;
+    border: 0;
+}
+
+.poem-block .editable-textarea-title::placeholder,
+.poem-block .editable-textarea-lines::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.poem-block .editable-textarea-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.poem-block .editable-textarea-lines {
+    font-family: var(--sans-serif);
+    font-size: 0.93rem;
+    font-weight: 450;
+    overflow-x: auto;
+    margin: 0;
+}
