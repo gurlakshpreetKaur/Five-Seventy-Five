@@ -1,0 +1,34 @@
+.login-modal {
+    border: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transition: 1s height;
+}
+
+.login-modal input[type="text"],
+.login-modal input[type="email"],
+.login-modal input[type="password"] {
+    margin: 4px 0px;
+}
+
+.login-modal h2 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.login-modal .gen-mess {
+    margin: 2.5px 0px;
+    font-size: 0.6rem;
+    font-family: var(--sans-serif);
+    color: white;
+    display: inline-block;
+    padding: 0px 60px;
+}
+
+.toShowError {
+    margin: 2.5px 0px;
+    font-size: 0.6rem;
+    color: var(--wine);
+    padding: 0px 60px;
+}
