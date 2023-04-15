@@ -1,0 +1,53 @@
+.account-selected .account-settings {
+    width: 100%;
+    height: calc(100% - 34px);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-x: hidden;
+    gap: 17px
+}
+
+.account-selected .account-settings > div {
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: space-around;
+    width: calc(100% - 34px - 34px);
+    text-align: center;
+    background-color: var(--chai-light);
+    border-radius: 8px;
+    padding: 17px;
+    display: inline-block;
+    margin: auto;
+}
+
+.account-selected .account-settings > div > div input {
+    margin: 3px 0px;
+}
+
+label {
+    font-family: var(--sans-serif);
+    font-size: 15px;
+}
+
+.account-selected .account-settings #theme-select {
+    /* all: unset; */
+    background-color: var(--mid-green);
+    outline: 0;
+    border: 0;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: var(--sans-serif);
+    font-size: 13.33px;
+}
+
+@media screen and (max-width: 800px) {
+    .account-selected .account-settings {
+        grid-template-columns: 100%;
+    }
+}

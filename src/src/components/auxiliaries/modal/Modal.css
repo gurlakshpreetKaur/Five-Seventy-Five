@@ -1,0 +1,79 @@
+.modal {
+    background: var(--dark-green);
+    border-radius: 20px;
+    box-shadow: 1px 1px 40px 1px rgba(0, 0, 0, 0.500);
+    height: auto;
+    left: 50%;
+    opacity: 0;
+    padding: 35px 30px 35px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transition: 0.5s opacity cubic-bezier(0.79, 0.26, 0.18, 0.72),
+        0.7s transform cubic-bezier(0.79, 0.26, 0.18, 0.72);
+    transform: translateY(-50%) translateX(-50%);
+    max-width: 350px;
+    width: 80%;
+    /* min-width: 290px; */
+    z-index: 6;
+    overflow-y: auto;
+    max-height: calc(70vh);
+}
+
+.modal.chai,
+.modal .chai {
+    background-color: var(--chai);
+}
+
+.modal.wine,
+.modal .wine {
+    background-color: var(--wine);
+}
+
+.modal.hide {
+    opacity: 0;
+    transform: translateY(-51%) translateX(-50%) scale(0.95);
+}
+
+.modal h3,
+h2,
+h1 {
+    color: var(--color-important);
+}
+
+.modal-enter,
+.modal-exit-done {
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+}
+
+.modal-enter-active,
+.modal.modal-enter-done,
+.model-exit,
+.model-exit-active {
+    left: 50%;
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-45%) translateX(-50%);
+}
+
+@media screen and (max-width: 400px) {
+    .modal {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .modal {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .modal {
+        max-width: 220px;
+    }
+}
